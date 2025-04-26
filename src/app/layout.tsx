@@ -29,17 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${robotoFlex.variable} ${robotoMono.variable}`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          value={{
-            light: "light",
-            dark: "dark",
-          }}
-        >
-          <AnimatePresence mode="wait">{children}</AnimatePresence>
-        </ThemeProvider>
+        {children}
       </body>
     </html>
   );
