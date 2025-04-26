@@ -5,9 +5,19 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
+        // Use CSS variables for theme-aware colors
+        background: 'var(--background)',
+        foreground: 'var(--foreground)',
+        
+        // Your existing color palette
+        app: {
+          DEFAULT: '#FFFFFF', // light mode background
+          dark: '#0F0F0F',    // dark mode background
+        },
         white: "#FFFFFF",
         black: "#000000",
         orange: {
@@ -42,8 +52,9 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ['var(--font-roboto-flex)', 'sans-serif'],
-        mono: ['var(--font-roboto-mono)', 'monospace'],
+        // Reference CSS variables from your global.css
+        sans: ['var(--font-sans)', 'sans-serif'],
+        mono: ['var(--font-mono)', 'monospace'],
       },
       borderRadius: {
         btn: "9999px",
