@@ -10,7 +10,7 @@ import { usePathname } from "next/navigation"; // Hook to access the current pat
  * Navbar component
  *
  * Features:
- * - Sticky top navigation bar
+ * - Fixed top navigation bar
  * - Animated links using Framer Motion
  * - Highlights active link
  * - Responsive: Desktop and Mobile support
@@ -43,7 +43,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="sticky rounded-[0.65rem] top-0 z-[1000] bg-[#1A1A1A] mx-2.5 md:mx-10 mt-1.5 md:mt-3.5 font-mono">
+    <nav className="fixed rounded-[0.65rem] top-0 left-0 right-0 z-[1000] bg-[#1A1A1A] mx-2.5 md:mx-10 mt-1.5 md:mt-3.5 font-mono">
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
